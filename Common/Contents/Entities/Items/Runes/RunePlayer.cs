@@ -7,7 +7,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Runes
 {
     public class RunePlayer : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void ModifyHitNPC( Item item , NPC target , ref int damage , ref float knockback , ref bool crit )
         {

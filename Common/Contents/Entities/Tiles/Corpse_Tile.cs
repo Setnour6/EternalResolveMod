@@ -28,7 +28,7 @@ namespace EternalResolve.Common.Contents.Entities.Tiles
         }
         public override bool RightClick( int i , int j )
         {
-            Item.NewItem( new Vector2( i , j ) * 16 , ModContent.ItemType<Rust>( ) );
+            Item.NewItem(null, new Vector2( i , j ) * 16 , ModContent.ItemType<Rust>( ) );
             WorldGen.KillTile( i , j );
             return true;
         }

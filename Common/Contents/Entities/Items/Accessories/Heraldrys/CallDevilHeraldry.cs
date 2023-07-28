@@ -31,7 +31,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Heraldrys
         {
             player.maxMinions++;
             player.maxTurrets++;
-            player.minionKB += 0.5f;
+            player.GetKnockback(DamageClass.Summon).Base += 0.5f;
             player.GetDamage( DamageClass.Melee ) += 0.18f;
         }
         public override void AddRecipes( )

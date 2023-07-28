@@ -27,8 +27,8 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.EkandaBricks
             AddMapEntry( new Color( 152 , 171 , 198 ) , name );
             DustType = 84;
             //	ItemDrop = ModContent.ItemType<>( );
-            SoundType = SoundID.Tink;
-            SoundStyle = 1;
+            HitSound = SoundID.Tink;
+            //SoundStyle = 1;
             MineResist = 999f;
             MinPick = 999;
         }

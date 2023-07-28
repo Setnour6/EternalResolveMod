@@ -53,7 +53,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.GhostWords
                 dust.noGravity = true;
                 dust.fadeIn = 3f;
             }
-            Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.Center , Vector2.Zero , ModContent.ProjectileType<GhostGodArrowHitEffect>( ) , 0 , 0f , Main.myPlayer , 0f , 0f );
+            Projectile.NewProjectile( null , Projectile.Center , Vector2.Zero , ModContent.ProjectileType<GhostGodArrowHitEffect>( ) , 0 , 0f , Main.myPlayer , 0f , 0f );
             base.Kill( timeLeft );
         }
     }

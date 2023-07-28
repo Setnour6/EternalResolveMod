@@ -58,11 +58,12 @@ namespace EternalResolve.Common.Contents.Entities.Npcs
             int num288;
             for ( int num287 = num285; num287 < num285 + num286; num287 = num288 + 1 )
             {
-                if ( Main.tile[ num284 , num287 ] == null )
-                {
-                    Main.tile[ num284 , num287 ] = new Tile( );
-                }
-                if ( ( Main.tile[ num284 , num287 ].IsActive && Main.tileSolid[ (int) Main.tile[ num284 , num287 ].type ] ) || Main.tile[ num284 , num287 ].LiquidAmount > 0 )
+                // Below commented out to fix CS0200 - Property or indexer '' cannot be assigned to -- it is read only.
+                //if ( Main.tile[ num284 , num287 ] == null )
+                //{
+                //    Main.tile[ num284 , num287 ] = new Tile( );
+                //}
+                if ( ( Main.tile[ num284 , num287 ].IsActuated && Main.tileSolid[ (int) Main.tile[ num284 , num287 ].TileType ] ) || Main.tile[ num284 , num287 ].LiquidAmount > 0 ) // IsActive -> IsActuated.
                 {
                     flag20 = false;
                     break;
@@ -74,12 +75,13 @@ namespace EternalResolve.Common.Contents.Entities.Npcs
                 bool flag21 = false;
                 for ( int num289 = num285; num289 < num285 + num286 - 2; num289 = num288 + 1 )
                 {
-                    if ( Main.tile[ num284 , num289 ] == null )
-                    {
-                        Main.tile[ num284 , num289 ] = new Tile( );
-                    }
-                    if ( ( Main.tile[ num284 , num289 ].IsActive && Main.tileSolid[ (int) Main.tile[ num284 , num289 ].type ] ) || Main.tile[ num284 , num289 ].LiquidAmount > 0 )
-                    {
+					// Below commented out to fix CS0200 - Property or indexer '' cannot be assigned to -- it is read only.
+					//if ( Main.tile[ num284 , num289 ] == null )
+					//{
+					//    Main.tile[ num284 , num289 ] = new Tile( );
+					//}
+					if ( ( Main.tile[ num284 , num289 ].IsActuated && Main.tileSolid[ (int) Main.tile[ num284 , num289 ].TileType ] ) || Main.tile[ num284 , num289 ].LiquidAmount > 0) // IsActive -> IsActuated.
+					{
                         flag21 = true;
                         break;
                     }

@@ -36,7 +36,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Bosses
         }
         public override void UpdateAccessory( Player player , bool hideVisual )
         {
-            player.armorPenetration += 15;
+            player.GetArmorPenetration(DamageClass.Generic) += 15;
             player.dash = 1;
         }
     }

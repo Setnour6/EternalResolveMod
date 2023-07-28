@@ -8,15 +8,15 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.CandlelightWishs
 {
     public class CandlelightWish_Cut_Frame : GlobalProjectile
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override bool InstancePerEntity => true;
 
-        public override GlobalProjectile Clone( )
-        {
-            return base.Clone( );
-        }
-        public int Timer = 0;
+		public override GlobalProjectile Clone(Projectile from, Projectile to)
+		{
+			return base.Clone(from, to);
+		}
+		public int Timer = 0;
 
         public int FrameSpeed = 0;
 

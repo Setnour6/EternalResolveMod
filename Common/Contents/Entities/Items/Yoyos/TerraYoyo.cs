@@ -22,7 +22,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Yoyos
         }
         public override void HoldItem( Player player )
         {
-            player.armorPenetration += 200;
+            player.GetArmorPenetration(DamageClass.Generic) += 200;
         }
         public override void AddRecipes( )
         {

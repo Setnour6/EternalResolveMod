@@ -33,7 +33,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.FishingRods
             Item.shootSpeed = 10f;
             Item.fishingPole = 80;
         }
-        public override bool Shoot( Player player , ProjectileSource_Item_WithAmmo source , Vector2 position , Vector2 velocity , int type , int damage , float knockback )
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             float num = 0.783f;
             float num2 = (float) Math.Sqrt( velocity.X * velocity.X + velocity.Y * velocity.Y );
@@ -42,7 +42,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.FishingRods
             for ( int i = 0; i < 5; i++ )
             {
                 double num5 = num3 + num4 * i;
-                Projectile.NewProjectile( new ERProjectileSource( ) , position.X , position.Y , num2 * (float) Math.Sin( num5 ) , num2 * (float) Math.Cos( num5 ) , type , damage , knockback , player.whoAmI , 0f , 0f );
+                Projectile.NewProjectile( null , position.X , position.Y , num2 * (float) Math.Sin( num5 ) , num2 * (float) Math.Cos( num5 ) , type , damage , knockback , player.whoAmI , 0f , 0f ); // source from ai is better?
             }
             return false;
         }

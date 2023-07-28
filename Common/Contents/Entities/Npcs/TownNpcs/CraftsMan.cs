@@ -1,8 +1,9 @@
-using EternalResolve.Common.Contents.Entities.Items;
+﻿using EternalResolve.Common.Contents.Entities.Items;
 using EternalResolve.Common.Contents.Entities.Items.Electrics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Terraria;
 using Terraria.GameContent;
@@ -138,7 +139,7 @@ namespace EternalResolve.Common.Contents.Entities.Npcs.TownNpcs
                     int ProjID = ProjectileID.RocketSnowmanI;
                     if ( Main.netMode != NetmodeID.MultiplayerClient )
                     {
-                        Projectile.NewProjectile( new ERProjectileSource( ) , NPC.Center.X + (float) ( NPC.spriteDirection * 16 ) , NPC.Center.Y - 2f , vector.X + (float) Main.rand.Next( -20 , 11 ) * 0.3f , vector.Y + (float) Main.rand.Next( -20 , 11 ) * 0.3f , ProjID , damage , 5f , Player );
+                        Projectile.NewProjectile( NPC.GetSource_FromAI() , NPC.Center.X + (float) ( NPC.spriteDirection * 16 ) , NPC.Center.Y - 2f , vector.X + (float) Main.rand.Next( -20 , 11 ) * 0.3f , vector.Y + (float) Main.rand.Next( -20 , 11 ) * 0.3f , ProjID , damage , 5f , Player ); // should the entity source be null instead?
                     }
                 }
                 if ( currentframe >= 10 && AttackLoop <= 7 )
@@ -191,9 +192,12 @@ namespace EternalResolve.Common.Contents.Entities.Npcs.TownNpcs
             }
             return false;
         }
-        public override string TownNPCName( )
+        public override List<string> SetNPCNameList( )/* tModPorter Suggestion: Return a list of names */
         {
-            return "Az-20";
+            List<string> npcName = new List<string>() { "Az-20" };
+                
+			//npcName[1] = "Az-20";
+			return npcName;
         }
         public override string GetChat( )
         {
@@ -355,25 +359,25 @@ namespace EternalResolve.Common.Contents.Entities.Npcs.TownNpcs
                     Main.dust[ num526 ].noGravity = true;
                     num5 = num553;
                 }
-                int num527 = Gore.NewGore( new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
+                int num527 = Gore.NewGore(null, new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
                 Main.gore[ num527 ].scale = 1f;
                 Gore gore10 = Main.gore[ num527 ];
                 gore10.velocity.X = gore10.velocity.X + 1f;
                 Gore gore11 = Main.gore[ num527 ];
                 gore11.velocity.Y = gore11.velocity.Y + 1f;
-                num527 = Gore.NewGore( new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
+                num527 = Gore.NewGore(null, new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
                 Main.gore[ num527 ].scale = 1f;
                 Gore gore12 = Main.gore[ num527 ];
                 gore12.velocity.X = gore12.velocity.X - 1f;
                 Gore gore13 = Main.gore[ num527 ];
                 gore13.velocity.Y = gore13.velocity.Y + 1f;
-                num527 = Gore.NewGore( new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
+                num527 = Gore.NewGore(null, new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
                 Main.gore[ num527 ].scale = 1f;
                 Gore gore14 = Main.gore[ num527 ];
                 gore14.velocity.X = gore14.velocity.X + 1f;
                 Gore gore15 = Main.gore[ num527 ];
                 gore15.velocity.Y = gore15.velocity.Y - 1f;
-                num527 = Gore.NewGore( new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
+                num527 = Gore.NewGore(null, new Vector2( base.NPC.position.X + (float) ( base.NPC.width / 2 ) - 24f , base.NPC.position.Y + (float) ( base.NPC.height / 2 ) - 24f ) , default( Vector2 ) , Main.rand.Next( 11 , 13 ) , 1f );
                 Main.gore[ num527 ].scale = 1f;
                 Gore gore16 = Main.gore[ num527 ];
                 gore16.velocity.X = gore16.velocity.X - 1f;

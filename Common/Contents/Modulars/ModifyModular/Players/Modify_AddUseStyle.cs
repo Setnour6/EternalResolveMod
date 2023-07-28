@@ -8,7 +8,7 @@ namespace EternalResolve.Common.Contents.Modulars.ModifyModular.Players
 {
     public class Modify_AddUseStyle : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void PostUpdate( )
         {

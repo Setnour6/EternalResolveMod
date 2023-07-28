@@ -10,7 +10,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Engraves
     {
         public bool Enable = false;
 
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void ResetEffects( )
         {

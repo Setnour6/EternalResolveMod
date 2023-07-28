@@ -21,7 +21,7 @@ namespace EternalResolve.Common.Plots
 {
     public class Plot_0_Player : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public bool IsDown = false;
 

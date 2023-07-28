@@ -17,7 +17,7 @@ namespace EternalResolve.Common.Contents.Modulars.RuneModular
 {
     public class PlayerRune : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public IList<Item> RunesCache = new List<Item>( );
 

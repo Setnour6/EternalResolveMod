@@ -33,9 +33,9 @@ namespace EternalResolve.Common.Contents.Entities.Items.Sickle
         {
             target.AddBuff( 30 , 30 , false );
             target.AddBuff( 31 , 30 , false );
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center + new Vector2( 0f , -900f ) , new Vector2( 0f , 20f ) , 424 , Item.damage , knockBack , Main.myPlayer , 0f , 0f );
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center + new Vector2( 0f , -600f ) , new Vector2( 0f , 20f ) , 425 , Item.damage , knockBack , Main.myPlayer , 0f , 0f );
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center + new Vector2( 0f , -300f ) , new Vector2( 0f , 20f ) , 426 , Item.damage , knockBack , Main.myPlayer , 0f , 0f );
+            Projectile.NewProjectile( null , target.Center + new Vector2( 0f , -900f ) , new Vector2( 0f , 20f ) , 424 , Item.damage , knockBack , Main.myPlayer , 0f , 0f ); // is there a better entity source to use?
+            Projectile.NewProjectile( null , target.Center + new Vector2( 0f , -600f ) , new Vector2( 0f , 20f ) , 425 , Item.damage , knockBack , Main.myPlayer , 0f , 0f );
+            Projectile.NewProjectile( null , target.Center + new Vector2( 0f , -300f ) , new Vector2( 0f , 20f ) , 426 , Item.damage , knockBack , Main.myPlayer , 0f , 0f );
         }
 
         public override void AddRecipes( )

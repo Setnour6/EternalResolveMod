@@ -89,7 +89,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Summons.Impacts
         }
         public override void OnHitNPC( NPC target , int damage , float knockback , bool crit )
         {
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+            Projectile.NewProjectile( Projectile.GetSource_OnHit(target) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
             base.OnHitNPC( target , damage , knockback , crit );
         }
     }

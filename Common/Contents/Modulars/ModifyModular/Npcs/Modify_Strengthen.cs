@@ -10,13 +10,13 @@ namespace EternalResolve.Common.Contents.Modulars.ModifyModular.Npcs
     public class Modify_Strengthen : GlobalNPC
     {
         public override bool InstancePerEntity => true;
-        public override bool CloneNewInstances => true;
-        public override GlobalNPC Clone( )
-        {
-            return base.Clone( );
-        }
+        protected override bool CloneNewInstances => true;
+		public override GlobalNPC Clone( NPC from, NPC to )
+		{
+			return base.Clone( from, to );
+		}
 
-        public bool Strengthened = false;
+		public bool Strengthened = false;
 
         bool _starengthened = false;
 

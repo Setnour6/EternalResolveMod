@@ -9,13 +9,13 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.RedRiots
 {
     public class RedRiotPowerFrame : GlobalProjectile
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override bool InstancePerEntity => true;
 
-        public override GlobalProjectile Clone( )
+        public override GlobalProjectile Clone( Projectile from, Projectile to )
         {
-            return base.Clone( );
+            return base.Clone( from, to );
         }
 
         public int Timer = 0;
@@ -163,35 +163,35 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.RedRiots
                     switch ( frame )
                     {
                         case 2:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage / 16 , npc );
                             break;
                         case 3:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage / 8 , npc );
                             break;
                         case 4:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage / 4 , npc );
                             break;
                         case 5:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage / 2 , npc );
                             break;
                         case 6:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage / 2 , npc );
                             break;
                         case 7:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage , npc );
                             break;
                         case 8:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage * 2 , npc );
                             break;
                         case 10:
-                            Projectile.NewProjectile( new ERProjectileSource( ) , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+                            Projectile.NewProjectile( null , npc.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
                             Hit( Projectile.damage * 4 , npc , true );
                             break;
                     }

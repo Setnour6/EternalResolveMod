@@ -40,7 +40,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.ColdingSuns
             type = ModContent.ProjectileType<SunStar>( );
             base.ModifyShootStats( player , ref position , ref velocity , ref type , ref damage , ref knockback );
         }
-        public override void ModifyWeaponDamage( Player player , ref StatModifier damage , ref float flat )
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
             Item.damage = 20;
             if ( NPC.downedSlimeKing )
@@ -67,7 +67,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.ColdingSuns
             if ( NPC.downedGolemBoss )
                 Item.damage += 10;
 
-            base.ModifyWeaponDamage( player , ref damage , ref flat );
+            base.ModifyWeaponDamage( player , ref damage );
         }
         public override void UpdateInventory( Player player )
         {

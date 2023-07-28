@@ -9,7 +9,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.DeeperCold.Bow
 {
     public class DeeperColdBow_Power : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void ModifyHitNPCWithProj( Projectile proj , NPC target , ref int damage , ref float knockback , ref bool crit , ref int hitDirection )
         {

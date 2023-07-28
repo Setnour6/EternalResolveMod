@@ -47,10 +47,10 @@ namespace EternalResolve.Common.Contents.Modulars.RefineSystemModular
             base.SetDefaults( item );
         }
 
-        public override void ModifyWeaponDamage( Item item , Player player , ref StatModifier damage , ref float flat )
+        public override void ModifyWeaponDamage(Item item, Player player, ref StatModifier damage)
         {
-            flat += item.damage * item.GetGlobalItem<WeaponRefine>( ).Level * item.GetGlobalItem<WeaponRefine>( ).Level / 200f;
-            base.ModifyWeaponDamage( item , player , ref damage , ref flat );
+            damage.Flat += item.damage * item.GetGlobalItem<WeaponRefine>( ).Level * item.GetGlobalItem<WeaponRefine>( ).Level / 200f;
+            base.ModifyWeaponDamage( item , player , ref damage );
         }
 
         public override void UpdateEquip( Item item , Player player )

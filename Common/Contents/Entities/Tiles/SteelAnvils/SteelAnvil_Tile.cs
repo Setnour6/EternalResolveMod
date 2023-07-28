@@ -17,8 +17,8 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.SteelAnvils
             Main.tileFrameImportant[ Type ] = true;
             TileID.Sets.DisableSmartCursor[ Type ] = true;
             DustType = 21;
-            SoundType = SoundID.Tink;
-            SoundStyle = 1;
+            HitSound = SoundID.Tink;
+            //SoundStyle = 1;
             AdjTiles = new int[ ] { TileID.Anvils };
             TileObjectData.newTile.CopyFrom( TileObjectData.Style2x1 );
             TileObjectData.newTile.CoordinateHeights = new[ ] { 18 };
@@ -36,7 +36,7 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.SteelAnvils
         }
         public override void KillMultiTile( int i , int j , int frameX , int frameY )
         {
-            Item.NewItem( i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<SteelAnvil>( ) , 1 , false , 0 , false , false );
+            Item.NewItem(null, i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<SteelAnvil>( ) , 1 , false , 0 , false , false );
         }
     }
 }

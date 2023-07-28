@@ -12,7 +12,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Currencies
     {
         public override bool InstancePerEntity => true;
 
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void OnKill( NPC npc )
         {
@@ -38,7 +38,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Currencies
 
     public class CleanBeadStoneMouseCheck : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public int LootCD = 600;
 

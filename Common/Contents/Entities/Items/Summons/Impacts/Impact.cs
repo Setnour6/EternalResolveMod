@@ -36,7 +36,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Summons.Impacts
             {
                 if ( player.GetModPlayer<Impact_Power>( ).ImpactPower &&
                     player.ownedProjectileCounts[ ModContent.ProjectileType<Impact_Summon>( ) ] < 1 )
-                    Projectile.NewProjectile( new ERProjectileSource( ) , player.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Impact_Summon>( ) , player.statLife / 10 , 0 , player.whoAmI , 0 , 0 );
+                    Projectile.NewProjectile( null , player.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Impact_Summon>( ) , player.statLife / 10 , 0 , player.whoAmI , 0 , 0 );
             }
             base.UpdateInventory( player );
         }
@@ -78,7 +78,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Summons.Impacts
         }
         public override void OnHitNPC( Player player , NPC target , int damage , float knockBack , bool crit )
         {
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , player.whoAmI , Main.rand.NextFloat( ) , 0 );
+            Projectile.NewProjectile( Projectile.InheritSource(Item) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , player.whoAmI , Main.rand.NextFloat( ) , 0 ); // is null better to use for proj source?
             base.OnHitNPC( player , target , damage , knockBack , crit );
         }
     }

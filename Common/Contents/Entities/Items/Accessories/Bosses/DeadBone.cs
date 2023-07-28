@@ -41,7 +41,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Bosses
         }
         public override void UpdateAccessory( Player player , bool hideVisual )
         {
-            player.armorPenetration += 4;
+            player.GetArmorPenetration(DamageClass.Generic) += 4;
             player.lifeRegen += 4;
         }
         public override void UpdateInventory( Player player )

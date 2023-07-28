@@ -32,7 +32,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.ColdingSuns
             if ( count < 1 )
             {
                 ModUtils.DustCircle( DustID.TintableDustLighted , Projectile.Center , 2 , 360 );
-                int whoAml = Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.Center , Projectile.velocity ,
+                int whoAml = Projectile.NewProjectile( Projectile.GetSource_FromAI() , Projectile.Center , Projectile.velocity ,
                     ModContent.ProjectileType<SunStarTrail>( ) , 0 , 0 , Projectile.owner , 0 , 0 );
                 count = 1;
                 whoAmlCache = whoAml;

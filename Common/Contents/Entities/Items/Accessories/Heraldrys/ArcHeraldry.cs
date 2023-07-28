@@ -25,7 +25,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Heraldrys
         public override void UpdateAccessory( Player player , bool hideVisual )
         {
             player.GetCritChance( DamageClass.Melee ) += 6;
-            player.meleeSpeed += 0.08f;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.08f;
         }
         public override void AddRecipes( )
         {

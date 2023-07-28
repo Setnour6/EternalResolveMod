@@ -118,7 +118,7 @@ namespace EternalResolve.Common.Contents.Modulars.PrayModular
                     item.SetDefaults( itemID.ID );
                     item.stack = itemID.Stack;
                     item.GetGlobalItem<AntiCheating>( ).FormalChannel = true;
-                    Main.LocalPlayer.QuickSpawnItem( item );
+                    Main.LocalPlayer.QuickSpawnItem(null, item );
                     PrayType = 5;
                 }
                 else
@@ -155,7 +155,7 @@ namespace EternalResolve.Common.Contents.Modulars.PrayModular
                         item.SetDefaults( itemID.ID );
                         item.stack = itemID.Stack;
                         item.GetGlobalItem<AntiCheating>( ).FormalChannel = true;
-                        Main.LocalPlayer.QuickSpawnItem( item );
+                        Main.LocalPlayer.QuickSpawnItem(null, item );
                     }
                     PrayType = 5;
                 }

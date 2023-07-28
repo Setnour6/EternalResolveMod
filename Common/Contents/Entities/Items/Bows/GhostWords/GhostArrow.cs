@@ -34,7 +34,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.GhostWords
                 dust.noGravity = true;
                 dust.fadeIn = 3f;
             }
-            Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.Center , -Projectile.velocity / 100f , ModContent.ProjectileType<GhostArrowHitEffect>( ) , 0 , 0f , Main.myPlayer , 0f , 0f );
+            Projectile.NewProjectile( null , Projectile.Center , -Projectile.velocity / 100f , ModContent.ProjectileType<GhostArrowHitEffect>( ) , 0 , 0f , Main.myPlayer , 0f , 0f );
             base.Kill( timeLeft );
         }
     }

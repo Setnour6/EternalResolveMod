@@ -8,7 +8,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Rings
 {
     public class ArimiRing_Power : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public bool Enable = false;
 
@@ -49,7 +49,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Rings
                 if ( _counter % 3 == 0 )
                 {
                     _counter = 0;
-                    Projectile.NewProjectile( new ERProjectileSource( ) , position , velocity , ModContent.ProjectileType<ArimiRing_Pro>( ) , damage , knockback , Main.myPlayer , 0 , 0 );
+                    Projectile.NewProjectile( null , position , velocity , ModContent.ProjectileType<ArimiRing_Pro>( ) , damage , knockback , Main.myPlayer , 0 , 0 );
                 }
             }
             base.ModifyShootStats( item , ref position , ref velocity , ref type , ref damage , ref knockback );

@@ -8,7 +8,7 @@ namespace EternalResolve.Common.Contents.Modulars.PrayModular
 {
     public class PrayPlayer : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override void PreUpdate( )
         {

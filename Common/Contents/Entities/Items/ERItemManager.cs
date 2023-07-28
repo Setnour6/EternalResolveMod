@@ -25,7 +25,7 @@ namespace EternalResolve.Common.Contents.Entities.Items
         {
             if ( Main.netMode == NetmodeID.MultiplayerClient || Main.netMode == NetmodeID.Server )
             {
-                int num = Item.NewItem( Position , itemType , itemStack , noBroadcast: false );
+                int num = Item.NewItem(null, Position , itemType , itemStack , noBroadcast: false );
                 Main.timeItemSlotCannotBeReusedFor[ num ] = 0;
                 for ( int i = 0; i < 255; i++ )
                 {
@@ -37,7 +37,7 @@ namespace EternalResolve.Common.Contents.Entities.Items
             }
             else if ( Main.netMode == NetmodeID.SinglePlayer )
             {
-                int num = Item.NewItem( Position , itemType , itemStack , noBroadcast: false );
+                int num = Item.NewItem(null, Position , itemType , itemStack , noBroadcast: false );
                 Main.item[ num ].GetGlobalItem<AntiCheating>( ).FormalChannel = true;
                 Main.item[ num ].CreateUUID( );
             }
@@ -47,7 +47,7 @@ namespace EternalResolve.Common.Contents.Entities.Items
         {
             if ( Main.netMode == NetmodeID.MultiplayerClient || Main.netMode == NetmodeID.Server )
             {
-                int num = Item.NewItem( Position , itemType , itemStack , noBroadcast: false );
+                int num = Item.NewItem(null, Position , itemType , itemStack , noBroadcast: false );
                 Main.timeItemSlotCannotBeReusedFor[ num ] = 0;
                 for ( int i = 0; i < 255; i++ )
                 {
@@ -59,7 +59,7 @@ namespace EternalResolve.Common.Contents.Entities.Items
             }
             else if ( Main.netMode == NetmodeID.SinglePlayer )
             {
-                int num = Item.NewItem( Position , itemType , itemStack , noBroadcast: false );
+                int num = Item.NewItem(null, Position , itemType , itemStack , noBroadcast: false );
                 Main.item[ num ].GetGlobalItem<Modify_Authentication>( ).Authentication = true;
                 Main.item[ num ].GetGlobalItem<AntiCheating>( ).FormalChannel = true;
                 Main.item[ num ].CreateUUID( );

@@ -68,19 +68,19 @@ namespace EternalResolve.Common.Contents.Entities.Items.Guns.ShadowKillers
         {
             return new Vector2( -4 , 0 );
         }
-        public override bool Shoot( Player player , ProjectileSource_Item_WithAmmo source , Vector2 position , Vector2 velocity , int type , int damage , float knockback )
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             if ( Item.GetGlobalItem<ShadowKillerCounter>( ).TheShoot == 4 )
             {
                 Engine.PlaySound( SoundID.Item14 );
-                Projectile.NewProjectile( new ERProjectileSource( ) , position , velocity , ModContent.ProjectileType<ShadowKillerProj>( ) ,
+                Projectile.NewProjectile( source , position , velocity , ModContent.ProjectileType<ShadowKillerProj>( ) ,
                     Item.damage , Item.knockBack , Main.myPlayer , 1 , 0 );
             }
             else
             {
                 Engine.PlaySound( SoundID.Item36 );
 
-                Projectile.NewProjectile( new ERProjectileSource( ) , position , velocity , ModContent.ProjectileType<ShadowKillerProj>( ) ,
+                Projectile.NewProjectile( source , position , velocity , ModContent.ProjectileType<ShadowKillerProj>( ) ,
                     Item.damage , Item.knockBack , Main.myPlayer , 0 , 0 );
             }
             return false;
@@ -118,9 +118,9 @@ namespace EternalResolve.Common.Contents.Entities.Items.Guns.ShadowKillers
     }
     public class ShadowKillerPlayer : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
-        public override bool Shoot( Item item , ProjectileSource_Item_WithAmmo source , Vector2 position , Vector2 velocity , int type , int damage , float knockback )
+        public override bool Shoot(Item item, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             if ( Player.HeldItem.type != ItemID.None )
             {
@@ -201,7 +201,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Guns.ShadowKillers
                 {
                     if ( Main.rand.Next( 1 , 3 ) == 2 && npc.type == NPCID.SkeletronHead )
                     {
-                        int ItemWhoAml = Item.NewItem( npc.Center , ModContent.ItemType<ShadowKiller>( ) );
+                        int ItemWhoAml = Item.NewItem(null, npc.Center , ModContent.ItemType<ShadowKiller>( ) ); // TODO: try to find source if it doesn't work ~Setnour6
                     }
                 }
             }

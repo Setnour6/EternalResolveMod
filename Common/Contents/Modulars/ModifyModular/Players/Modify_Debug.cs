@@ -6,7 +6,7 @@ namespace EternalResolve.Common.Contents.Modulars.ModifyModular.Players
 {
     public class Modify_Debug : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
         public override void PostUpdate( )
         {
             if ( Terraria.Main.netMode != Terraria.ID.NetmodeID.Server )

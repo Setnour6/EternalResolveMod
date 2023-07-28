@@ -9,13 +9,13 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.NightKillerSlashs
 {
     public class NightKillerSlashChopFrame : GlobalProjectile
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override bool InstancePerEntity => true;
 
-        public override GlobalProjectile Clone( )
+        public override GlobalProjectile Clone( Projectile from, Projectile to )
         {
-            return base.Clone( );
+            return base.Clone( from, to );
         }
 
         public int Timer = 0;
@@ -46,7 +46,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.NightKillerSlashs
         }
         public override void OnHitNPC( NPC target , int damage , float knockback , bool crit )
         {
-            Projectile.NewProjectile( new ERProjectileSource( ) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
+            Projectile.NewProjectile( Projectile.GetSource_OnHit(target) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
             base.OnHitNPC( target , damage , knockback , crit );
         }
         public override bool PreAI( )

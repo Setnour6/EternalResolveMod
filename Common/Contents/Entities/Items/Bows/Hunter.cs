@@ -31,7 +31,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows
             Item.useAnimation += 9;
             Item.value = Item.sellPrice( 0 , 0 , 50 );
         }
-        public override bool Shoot( Player player , ProjectileSource_Item_WithAmmo source , Vector2 position , Vector2 velocity , int type , int damage , float knockback )
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             if ( Main.rand.Next( 10 ) == 5 )
                 type = ProjectileID.BoneArrow;

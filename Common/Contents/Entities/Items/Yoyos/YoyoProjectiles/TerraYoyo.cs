@@ -32,7 +32,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Yoyos.YoyoProjectiles
             rot++;
             if ( Projectile.ai[ 1 ] % 6f == 0f )
             {
-                Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.Center.X , Projectile.Center.Y , Main.rand.Next( -5 , 5 ) , Main.rand.Next( -5 , 5 ) , 604 , 70 , 3f , Projectile.owner , 0f , 0f );
+                Projectile.NewProjectile( null , Projectile.Center.X , Projectile.Center.Y , Main.rand.Next( -5 , 5 ) , Main.rand.Next( -5 , 5 ) , 604 , 70 , 3f , Projectile.owner , 0f , 0f ); // is it better to use a different entity source?
                 Projectile.ai[ 1 ] = 0f;
             }
             Projectile.rotation = Utils.ToRotation( Projectile.velocity ) + 3.1415926f / 180 * 45;

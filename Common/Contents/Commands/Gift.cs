@@ -13,7 +13,7 @@ namespace EternalResolve.Common.Contents.Commands
 {
     public class GiftRecord : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public bool Code_20210803_N = false;
 

@@ -24,7 +24,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Boxs
         }
         public override void OpenBossBag( Player player )
         {
-            Projectile.NewProjectile( new ERProjectileSource( ) , player.Center , new Vector2( 0 , -0.5f ) , ModContent.ProjectileType<OpeningBox_Effect>( ) , 0 , 0 , player.whoAmI , 0 , 0 );
+            Projectile.NewProjectile( null , player.Center , new Vector2( 0 , -0.5f ) , ModContent.ProjectileType<OpeningBox_Effect>( ) , 0 , 0 , player.whoAmI , 0 , 0 );
         }
     }
 }

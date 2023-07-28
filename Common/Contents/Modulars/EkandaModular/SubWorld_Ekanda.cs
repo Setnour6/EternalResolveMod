@@ -37,9 +37,9 @@ namespace EternalResolve.Common.Contents.Modulars.EkandaModular
         public static void EnterEkandaWorld( )
         {
             Loading = true;
-            x = Main.tile.GetLength( 0 );   
-            y = Main.tile.GetLength( 1 );
-            WorldFile.SaveWorld( );
+			x = Main.tile.Width;   // Main.tile.GetLength( 0 ) -> Main.tile.width
+			y = Main.tile.Width + 1; // Main.tile.GetLength( 1 ) -> Main.tile.width + 1
+			WorldFile.SaveWorld( );
             _mainWorldPath = Main.worldPathName;
             Main.ActiveWorldFileData = new WorldFileData( Main.WorldPath + "/SubWorlds/Ekanda_sub.wld" , false );
             WorldGen.playWorld( );
@@ -52,7 +52,7 @@ namespace EternalResolve.Common.Contents.Modulars.EkandaModular
             WorldFile.SaveWorld( );
             Player.SavePlayer( Main.ActivePlayerFileData , false );
             Main.ActiveWorldFileData = new WorldFileData( _mainWorldPath , false );
-            Main.tile = new Tile[ x , y ];
+            //Main.tile = new Tile[ x , y ]; // commented out until a solution is found
             WorldGen.playWorld( );
             InSubWorld = false;
             InEkandaWorld = false;

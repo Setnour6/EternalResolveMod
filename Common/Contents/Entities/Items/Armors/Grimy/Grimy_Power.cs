@@ -9,7 +9,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Armors.Grimy
 {
     public class Grimy_Power : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public bool GrimyHead = false;
 
@@ -36,7 +36,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Armors.Grimy
 
             base.ResetEffects( );
         }
-        public override bool PreHurt( bool pvp , bool quiet , ref int damage , ref int hitDirection , ref bool crit , ref bool customDamage , ref bool playSound , ref bool genGore , ref PlayerDeathReason damageSource )
+        public override bool PreHurt(bool pvp, bool quiet, ref int damage, ref int hitDirection, ref bool crit, ref bool customDamage, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource, ref int cooldownCounter)
         {
             if ( Player.GetModPlayer<Grimy_Power>( ).GrimyBody )
             {

@@ -6,7 +6,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Others
 {
     public class M_ModPlayer : ModPlayer
     {
-        public override bool PreHurt( bool pvp , bool quiet , ref int damage , ref int hitDirection , ref bool crit , ref bool customDamage , ref bool playSound , ref bool genGore , ref PlayerDeathReason damageSource )
+        public override bool PreHurt(bool pvp, bool quiet, ref int damage, ref int hitDirection, ref bool crit, ref bool customDamage, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource, ref int cooldownCounter)
         {
             if ( NPC.downedBoss2 && Main.rand.Next( 100 ) < 5 )
             {

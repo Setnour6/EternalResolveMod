@@ -31,7 +31,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Heraldrys
         }
         public override void UpdateAccessory( Player player , bool hideVisual )
         {
-            player.meleeSpeed += 0.12f;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.12f;
             player.GetDamage( DamageClass.Melee ) += 0.15f;
             player.GetCritChance( DamageClass.Melee ) += 15;
         }

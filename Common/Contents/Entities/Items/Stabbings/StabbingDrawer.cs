@@ -12,14 +12,14 @@ namespace EternalResolve.Common.Contents.Entities.Items.Stabbings
     {
         public override bool InstancePerEntity => true;
 
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
-        public override GlobalProjectile Clone( )
-        {
-            return base.Clone( );
-        }
+		public override GlobalProjectile Clone(Projectile from, Projectile to)
+		{
+			return base.Clone(from, to);
+		}
 
-        public bool IsStabbing = false;
+		public bool IsStabbing = false;
 
         public Color Color = Color.White;
 

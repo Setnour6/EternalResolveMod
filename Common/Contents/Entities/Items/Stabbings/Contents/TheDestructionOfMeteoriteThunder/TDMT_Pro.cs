@@ -18,7 +18,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Stabbings.Contents.TheDe
         }
         public override void OnHitNPC( NPC target , int damage , float knockback , bool crit )
         {
-            Projectile.NewProjectile( new ERProjectileSource() , target.Center , new Vector2( 0.01f , 0f ) , ModContent.ProjectileType<TDMT_Pro_TH>( ) , damage / 3 , 0.5f , Main.myPlayer , target.Center.X , target.Center.Y );
+            Projectile.NewProjectile( Projectile.GetSource_OnHit(target) , target.Center , new Vector2( 0.01f , 0f ) , ModContent.ProjectileType<TDMT_Pro_TH>( ) , damage / 3 , 0.5f , Main.myPlayer , target.Center.X , target.Center.Y );
             base.OnHitNPC( target , damage , knockback , crit );
         }
     }

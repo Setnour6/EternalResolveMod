@@ -157,7 +157,7 @@ namespace EternalResolve.Common.Contents.Modulars.EkandaModular
 
     public class EkandaPlayer : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public override bool CanUseItem( Item item )
         {

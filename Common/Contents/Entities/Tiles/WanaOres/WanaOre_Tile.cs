@@ -35,7 +35,7 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.WanaOres
                     int x = WorldGen.genRand.Next( 0 , Main.maxTilesX );
                     int y = WorldGen.genRand.Next( (int) WorldGen.worldSurfaceLow , Main.maxTilesY );
                     Tile tile = Framing.GetTileSafely( x , y );
-                    if ( tile.IsActive && tile.type == TileID.Stone )
+                    if ( tile.IsActuated && tile.TileType == TileID.Stone ) // IsActive -> Is Actuated
                     {
                         WorldGen.TileRunner( x , y , WorldGen.genRand.Next( 3 , 5 ) , WorldGen.genRand.Next( 2 , 4 ) , ModContent.TileType<WanaOre_Tile>( ) );
                     }
@@ -64,8 +64,8 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.WanaOres
             AddMapEntry( new Color( 152 , 191 , 198 ) , name );
             DustType = 84;
             //	ItemDrop = ModContent.ItemType<>( );
-            SoundType = SoundID.Tink;
-            SoundStyle = 1;
+            HitSound = SoundID.Tink;
+            //SoundStyle = 1;
             MineResist = 1.2f;
             MinPick = 100;
         }
@@ -75,7 +75,7 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.WanaOres
         }
         public override bool Drop( int i , int j )
         {
-            Item.NewItem( new Vector2( i * 16 , j * 16 ) , ModContent.ItemType<WanaOre>( ) , 1 );
+            Item.NewItem(null, new Vector2( i * 16 , j * 16 ) , ModContent.ItemType<WanaOre>( ) , 1 );
             return true;
         }
     }

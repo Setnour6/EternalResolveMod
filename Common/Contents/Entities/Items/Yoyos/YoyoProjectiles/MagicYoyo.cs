@@ -43,7 +43,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Yoyos.YoyoProjectiles
             }
             if ( Projectile.ai[ 1 ] % 6f == 0f )
             {
-                Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.Center.X , Projectile.Center.Y , (float) Main.rand.Next( -5 , 5 ) , (float) Main.rand.Next( -5 , 5 ) , ModContent.ProjectileType<MagicYoyoPower>( ) , 15 , 3f , Projectile.owner , 0f , 0f );
+                Projectile.NewProjectile( Projectile.GetSource_FromAI() , Projectile.Center.X , Projectile.Center.Y , (float) Main.rand.Next( -5 , 5 ) , (float) Main.rand.Next( -5 , 5 ) , ModContent.ProjectileType<MagicYoyoPower>( ) , 15 , 3f , Projectile.owner , 0f , 0f );
             }
         }
         public override void Kill( int timeLeft )

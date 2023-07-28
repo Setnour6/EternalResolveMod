@@ -8,7 +8,7 @@ using Terraria;
 namespace EternalResolve.Common.Graphics.Vertexs
 {
     [StructLayout( LayoutKind.Sequential , Size = 1 )]
-    public struct TrailDrawer
+    public struct TrailDrawer()
     {
         public Projectile Projectile { get; set; }
 

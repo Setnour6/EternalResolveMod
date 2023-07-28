@@ -35,7 +35,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Accessories.Openings
                     if ( npc.active && !npc.friendly && npc.Distance( player.Center ) < 1000 )
                     {
                         Engine.PlaySound( SoundID.Item30 );
-                        int whoAml = Projectile.NewProjectile( new ERProjectileSource( ) ,
+                        int whoAml = Projectile.NewProjectile(null ,
                     player.Center , Vector2.Normalize( npc.Center - player.Center ) * 10f , 206 , 10 + player.statDefense / 4 , 0 , player.whoAmI , 0 , 0 );
                         Main.projectile[ whoAml ].tileCollide = false;
                         Main.projectile[ whoAml ].timeLeft = 600;

@@ -2,7 +2,7 @@
 
 namespace EternalResolve.Common.Contents.Entities.Items
 {
-    public class ERProjectileSource : IProjectileSource
-    {
-    }
+    //public class ERProjectileSource : IProjectileSource
+    //{
+    //}
 }

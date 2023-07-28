@@ -56,7 +56,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Armors.Grimy
                 " 减少64点防御值\n" +
                 " 受到的伤害增加50%";
             player.statDefense += 4;
-            player.armorPenetration += 20;
+            player.GetArmorPenetration(DamageClass.Generic) += 20;
         }
     }
 }

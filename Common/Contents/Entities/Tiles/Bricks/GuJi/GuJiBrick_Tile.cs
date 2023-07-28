@@ -27,8 +27,8 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.Bricks.GuJi
             name.AddTranslation( EternalResolve.English , "Gu Ji Brick" );
             AddMapEntry( new Color( 152 , 191 , 198 ) , name );
             DustType = 84;
-            SoundType = SoundID.Tink;
-            SoundStyle = 1;
+            HitSound = SoundID.Tink;
+            //SoundStyle = 1;
             MineResist = 1.4f;
             MinPick = 180;
         }
@@ -38,7 +38,7 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.Bricks.GuJi
         }
         public override bool Drop( int i , int j )
         {
-            Item.NewItem( new Vector2( i * 16 , j * 16 ) , ModContent.ItemType<GuJiBrick>( ) , 1 );
+            Item.NewItem(null, new Vector2( i * 16 , j * 16 ) , ModContent.ItemType<GuJiBrick>( ) , 1 );
             return true;
         }
     }

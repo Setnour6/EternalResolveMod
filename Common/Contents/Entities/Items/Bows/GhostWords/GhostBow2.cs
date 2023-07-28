@@ -64,7 +64,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Bows.GhostWords
                     dust.noGravity = true;
                     dust.fadeIn = 1f;
                 }
-                Projectile.NewProjectile( new ERProjectileSource( ) , player.Center , Projectile.velocity * 30f , ModContent.ProjectileType<GhostGodArrow>( ) , Projectile.damage , Projectile.knockBack , Main.myPlayer , 0f , 0f );
+                Projectile.NewProjectile(Projectile.GetSource_FromAI(), player.Center , Projectile.velocity * 30f , ModContent.ProjectileType<GhostGodArrow>( ) , Projectile.damage , Projectile.knockBack , Main.myPlayer , 0f , 0f );
             }
             Projectile.position = player.RotatedRelativePoint( player.MountedCenter , true ) - Projectile.Size / 2f;
             Projectile.rotation = Utils.ToRotation( Projectile.velocity ) + w;

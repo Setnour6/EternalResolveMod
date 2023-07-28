@@ -53,7 +53,9 @@ namespace EternalResolve.Common.Contents.Entities.Items.Magics.Prism
             {
                 num4 = 5f;
             }
-            Projectile.damage = (int) ( (float) player.inventory[ player.selectedItem ].damage * player.GetDamage( DamageClass.Magic ) );
+			Console.WriteLine("ER DEBUG PLAYER INVENTORY SELECTED ITEM DAMAGE: " + player.inventory[player.selectedItem].damage); // needed to test
+
+			//Projectile.damage = ( player.inventory[ player.selectedItem ].DamageType * player.GetDamage( DamageClass.Magic ) );
             Projectile.ai[ 0 ] += 1f;
             Projectile.ai[ 1 ] += 1f;
             bool flag = false;
@@ -119,7 +121,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Magics.Prism
                         int damage = Projectile.damage;
                         for ( int i = 0; i < 7; i++ )
                         {
-                            Projectile.NewProjectile( new ERProjectileSource( ) , center.X , center.Y , vector4.X , vector4.Y , ModContent.ProjectileType<PrismLight>( ) , damage , Projectile.knockBack , Projectile.owner , (float) i , (float) Projectile.whoAmI );
+                            Projectile.NewProjectile( null , center.X , center.Y , vector4.X , vector4.Y , ModContent.ProjectileType<PrismLight>( ) , damage , Projectile.knockBack , Projectile.owner , (float) i , (float) Projectile.whoAmI );
                         }
                         Projectile.netUpdate = true;
                     }

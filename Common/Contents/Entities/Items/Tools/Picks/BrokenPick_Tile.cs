@@ -26,7 +26,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Tools.Picks
         }
         public override bool RightClick( int i , int j )
         {
-            Item.NewItem( i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<BrokenPick>( ) , 1 , false , 0 , false , false );
+            Item.NewItem(null, i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<BrokenPick>( ) , 1 , false , 0 , false , false );
             WorldGen.KillTile( i , j );
             return true;
         }

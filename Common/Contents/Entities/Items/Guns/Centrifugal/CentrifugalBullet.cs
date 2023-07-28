@@ -24,7 +24,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Guns.Centrifugal
         {
             if ( count < 1 )
             {
-                int whoAml = Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.position , Projectile.velocity ,
+                int whoAml = Projectile.NewProjectile( null , Projectile.position , Projectile.velocity ,
                     ModContent.ProjectileType<CentrifugalBullet_Effect>( ) , 0 , 0 , Projectile.owner , 0 , 0 );
                 count = 1;
                 whoAmlCache = whoAml;
@@ -35,14 +35,14 @@ namespace EternalResolve.Common.Contents.Entities.Items.Guns.Centrifugal
         {
             target.buffImmune[ BuffID.Frostburn ] = false;
             target.AddBuff( BuffID.Frostburn , 120 );
-            Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.position , Vector2.Zero ,
+            Projectile.NewProjectile( null , Projectile.position , Vector2.Zero , // is it better to use a different entity source?
                 ModContent.ProjectileType<CentrifugalBullet_HitEffect>( ) , 0 , 0 , Projectile.owner , Main.rand.NextFloat( ) * 3.1415926f , 0 );
             base.ModifyHitNPC( target , ref damage , ref knockback , ref crit , ref hitDirection );
         }
         public override void Kill( int timeLeft )
         {
             Main.projectile[ whoAmlCache ].velocity = Vector2.Zero;
-            Projectile.NewProjectile( new ERProjectileSource( ) , Projectile.position , Vector2.Zero ,
+            Projectile.NewProjectile( null , Projectile.position , Vector2.Zero ,
                 ModContent.ProjectileType<CentrifugalBullet_HitEffect>( ) , 0 , 0 , Projectile.owner , Main.rand.NextFloat( ) * 3.1415926f , 0 );
             base.Kill( timeLeft );
         }

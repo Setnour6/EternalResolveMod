@@ -26,12 +26,12 @@ namespace EternalResolve.Common.Contents.Entities.Items.Tools.Props
             Item.shootSpeed = 1;
             base.SetDefaults( );
         }
-        public override bool Shoot( Player player , ProjectileSource_Item_WithAmmo source , Vector2 position , Vector2 velocity , int type , int damage , float knockback )
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             int mouseY = Main.MouseWorld.Y.ToInt( ) / 16;
             if ( Main.netMode != NetmodeID.MultiplayerClient )
             {
-                for ( int count = 0; count < Main.tile.GetLength( 0 ); count++ )
+                for ( int count = 0; count < Main.tile.Width; count++ ) // Main.tile.GetLength -> Main.tile.width
                 {
                     WorldGen.PlaceTile( count , mouseY , TileID.Platforms );
                 }

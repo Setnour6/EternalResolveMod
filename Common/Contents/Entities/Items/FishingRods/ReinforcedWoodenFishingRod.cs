@@ -54,7 +54,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.FishingRods
             for ( int i = 0; i < 5; i++ )
             {
                 double num5 = num3 + num4 * i;
-                Projectile.NewProjectile( new ERProjectileSource( ) , position.X , position.Y , num2 * (float) Math.Sin( num5 ) , num2 * (float) Math.Cos( num5 ) , type , damage , knockback , player.whoAmI , 0f , 0f );
+                Projectile.NewProjectile( null , position.X , position.Y , num2 * (float) Math.Sin( num5 ) , num2 * (float) Math.Cos( num5 ) , type , damage , knockback , player.whoAmI , 0f , 0f );
             }
             base.ModifyShootStats( player , ref position , ref velocity , ref type , ref damage , ref knockback );
         }

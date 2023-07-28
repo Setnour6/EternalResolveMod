@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -48,10 +49,10 @@ namespace EternalResolve.Common.Contents.Entities.Tiles.RefiningWorkbenchs
 
         public override void KillMultiTile( int i , int j , int frameX , int frameY )
         {
-            Item.NewItem( i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<RefiningWorkbench>( ) , 1 , false , 0 , false , false );
+            Item.NewItem(null, i * 16 , j * 16 , 32 , 16 , ModContent.ItemType<RefiningWorkbench>( ) , 1 , false , 0 , false , false );
         }
 
-        public override bool HasSmartInteract( ) => true;
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) => true;
 
         public override bool RightClick( int i , int j )
         {

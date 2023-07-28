@@ -5,7 +5,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Armors.Cather
 {
     public class Cather_Power : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public bool CatherPower = false;
 

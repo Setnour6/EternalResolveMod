@@ -4,6 +4,7 @@ using EternalResolve.Common.Contents.Modulars.EternalResolveToolTipModular;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 
@@ -31,28 +32,28 @@ namespace EternalResolve.Common.Codes.UI.Contents
         {
             if ( Item.type == Main.mouseItem.type && Item.type != ItemID.None && Item.stack < Item.maxStack )
             {
-                Engine.PlaySound( SoundID.Grab , -1 , -1 , 1 , 1f , 0f );
+                SoundEngine.PlaySound( SoundID.Grab.WithVolumeScale(1f).WithPitchOffset(0f) , new Vector2(-1, -1)); // volume = 1f. pitch = 0f
                 Item.stack += Main.mouseItem.stack;
                 Main.mouseItem = new Item( );
                 return;
             }
             if ( Main.mouseItem.type == ItemID.None && Item.type != ItemID.None )
             {
-                Engine.PlaySound( SoundID.Grab , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.Grab.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Main.mouseItem = Item;
                 Item = new Item( );
                 return;
             }
             if ( Main.mouseItem.type != ItemID.None && Item.type == ItemID.None )
             {
-                Engine.PlaySound( SoundID.Grab , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.Grab.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Item = Main.mouseItem.Clone( );
                 Main.mouseItem = new Item( );
                 return;
             }
             if ( Main.mouseItem.type != ItemID.None && Item.type != ItemID.None )
             {
-                Engine.PlaySound( SoundID.Grab , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.Grab.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Item mouseItem = Main.mouseItem;
                 Main.mouseItem = Item;
                 Item = mouseItem;
@@ -64,7 +65,7 @@ namespace EternalResolve.Common.Codes.UI.Contents
             Main.LocalPlayer.mouseInterface = true;
             if ( Item.type != ItemID.None && Item.stack > 1 && Main.mouseItem.IsAir )
             {
-                Engine.PlaySound( SoundID.MenuTick , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.MenuTick.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Item item = new Item( );
                 item.SetDefaults( Item.type );
                 Main.mouseItem = item;
@@ -73,7 +74,7 @@ namespace EternalResolve.Common.Codes.UI.Contents
             }
             else if ( Item.type == ItemID.None && Main.mouseItem.type != ItemID.None && Main.mouseItem.stack > 1 )
             {
-                Engine.PlaySound( SoundID.MenuTick , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.MenuTick.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Item Item = new Item( );
                 Item.SetDefaults( Main.mouseItem.type );
                 Item.stack = 1;
@@ -81,7 +82,7 @@ namespace EternalResolve.Common.Codes.UI.Contents
             }
             else if ( Item.type == Main.mouseItem.type && Item.stack < Item.maxStack )
             {
-                Engine.PlaySound( SoundID.MenuTick , -1 , -1 , 1 , 1f , 0f );
+                Engine.PlaySound( SoundID.MenuTick.WithVolumeScale(1f).WithPitchOffset(0f), new Vector2(-1, -1));
                 Main.mouseItem.stack -= 1;
                 Item.stack += 1;
             }

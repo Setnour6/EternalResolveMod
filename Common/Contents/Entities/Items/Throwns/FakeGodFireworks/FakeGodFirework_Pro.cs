@@ -33,7 +33,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Throwns.FakeGodFireworks
             target.AddBuff( BuffID.ShadowFlame , 120 );
             if ( crit )
             {
-                Projectile.NewProjectile( new ERProjectileSource( ) ,
+                Projectile.NewProjectile( null ,
                     target.Center , -Vector2.UnitY * 10 , 496 , damage , knockback , Projectile.owner , 0 , 0 );
             }
             base.ModifyHitNPC( target , ref damage , ref knockback , ref crit , ref hitDirection );

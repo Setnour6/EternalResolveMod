@@ -32,7 +32,7 @@ namespace EternalResolve.Common.Contents.Entities.Items.Runes.Normal.SwordMan
         }
         public override void UpdateInventory( Player player )
         {
-            player.meleeSpeed += 0.12f;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.12f;
             base.UpdateInventory( player );
         }
     }

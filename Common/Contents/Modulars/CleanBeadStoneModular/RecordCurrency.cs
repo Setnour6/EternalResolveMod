@@ -6,7 +6,7 @@ namespace EternalResolve.Common.Contents.Modulars.CleanBeadStoneModular
 {
     public class RecordCurrency : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public ObscuredInt CleanBeadStone = 0;
 

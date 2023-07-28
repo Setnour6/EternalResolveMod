@@ -6,7 +6,7 @@ namespace EternalResolve.Common.Contents.Modulars.ModifyModular.Players
 {
     public class Modify_CritDamage : ModPlayer
     {
-        public override bool CloneNewInstances => true;
+        protected override bool CloneNewInstances => true;
 
         public float CritDamage = 1.5f;
 
