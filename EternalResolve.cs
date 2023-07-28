@@ -1,4 +1,4 @@
-﻿using EternalResolve.Common.Contents.Entities.Npcs.Bosses.Eye.Contents;
+﻿using EternalResolve.Common.Contents.Entities.Npcs.Bosses.Treacherous.Contents;
 using EternalResolve.Common.Graphics.Replaces;
 using EternalResolve.Hooks;
 using Terraria.Graphics.Effects;

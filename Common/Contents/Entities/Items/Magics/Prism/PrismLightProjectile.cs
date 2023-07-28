@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using log4net.Repository.Hierarchy;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -53,9 +54,8 @@ namespace EternalResolve.Common.Contents.Entities.Items.Magics.Prism
             {
                 num4 = 5f;
             }
-			Console.WriteLine("ER DEBUG PLAYER INVENTORY SELECTED ITEM DAMAGE: " + player.inventory[player.selectedItem].damage); // needed to test
 
-			//Projectile.damage = ( player.inventory[ player.selectedItem ].DamageType * player.GetDamage( DamageClass.Magic ) );
+			Projectile.damage = (player.inventory[player.selectedItem].damage * (int)player.GetDamage( DamageClass.Magic ).Additive ); // Additive magic damage, might be better.
             Projectile.ai[ 0 ] += 1f;
             Projectile.ai[ 1 ] += 1f;
             bool flag = false;

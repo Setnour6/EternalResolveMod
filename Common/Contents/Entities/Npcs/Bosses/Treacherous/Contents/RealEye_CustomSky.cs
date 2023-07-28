@@ -5,7 +5,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace EternalResolve.Common.Contents.Entities.Npcs.Bosses.Eye.Contents
+namespace EternalResolve.Common.Contents.Entities.Npcs.Bosses.Treacherous.Contents
 {
     public class RealEye_CustomSky : CustomSky
     {

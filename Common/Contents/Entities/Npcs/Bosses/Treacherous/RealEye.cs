@@ -7,7 +7,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace EternalResolve.Common.Contents.Entities.Npcs.Bosses.Eye
+namespace EternalResolve.Common.Contents.Entities.Npcs.Bosses.Treacherous
 {
     public class RealEye : ERNpc
     {
