@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj": {}
+    "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\EternalResolve.csproj": {}
   },
   "projects": {
-    "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj": {
+    "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\EternalResolve.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj",
+        "projectUniqueName": "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\EternalResolve.csproj",
         "projectName": "EternalResolve",
-        "projectPath": "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\CodeBackups\\EternalResolveMod\\obj\\",
+        "projectPath": "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\EternalResolve.csproj",
+        "packagesPath": "C:\\Users\\setno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\Applications\\Visual Studio 2022 Shared\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\setno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\Applications\\Visual Studio 2022 Shared\\NuGetPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

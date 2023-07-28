@@ -6,7 +6,7 @@ namespace EternalResolve.Assets.Sounds
     {
         //   public static ModSoundStyle BGM_WorldSword;
 
-        public static ModSound[ ] SoundEffects;
+        //public static ModSound[ ] SoundEffects;
 
         //       public static SoundEffect RuneSystem_Open;
 
