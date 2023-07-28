@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wWLIk7KKnEfYLyQfh8+SGR3u3IapM/IgCgSO/NMJOSXr9oeng5CQjEc5WaU6XlN5tDGrYnfnRELxm5dMhjCSsA==",
+  "success": true,
+  "projectFilePath": "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

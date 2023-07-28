@@ -1,0 +1,8 @@
+DisplayName = EternalResolve
+author = ColinWeiss
+version = 1.2.2
+hideResources = true
+hideCode = true
+includeSource = false
+includePDB = true
+buildIgnore = *.csproj, *.user,  bin\* , obj\*, .vs\*

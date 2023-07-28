@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>EternalResolve</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <Version />
+    <DebugType>portable</DebugType>
+    <AssemblyVersion></AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Common\Contents\Entities\Items\FishingRods\RoverBuoy.cs~RF3ac5a7.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Contents\Entities\Items\Runes\Ordinary\" />
+    <Folder Include="Common\Contents\Entities\Items\Runes\Excellent\" />
+    <Folder Include="Common\Contents\Entities\Items\Runes\Preeminent\" />
+    <Folder Include="Common\Contents\Entities\Items\Runes\Legend\" />
+    <Folder Include="Common\Contents\Entities\Items\Runes\Limited\" />
+    <Folder Include="Common\Contents\Entities\TileEntities\Extractors\" />
+    <Folder Include="Common\Contents\Entities\Tiles\Others\" />
+  </ItemGroup>
+</Project>

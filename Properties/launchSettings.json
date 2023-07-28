@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Terraria": {
+      "commandName": "Executable",
+      "executablePath": "F:\\Steam\\steamapps\\common\\tModLoader\\dotnet\\6.0.0\\dotnet.exe",
+      "commandLineArgs": "$(tMLPath)",
+      "workingDirectory": "$(tMLSteamPath)",
+      "remoteDebugEnabled": false,
+      "nativeDebugging": false
+    },
+    "TerrariaServer": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "$(tMLServerPath)",
+      "workingDirectory": "$(tMLSteamPath)"
+    }
+  }
+}
