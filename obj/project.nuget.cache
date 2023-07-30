@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wWLIk7KKnEfYLyQfh8+SGR3u3IapM/IgCgSO/NMJOSXr9oeng5CQjEc5WaU6XlN5tDGrYnfnRELxm5dMhjCSsA==",
+  "dgSpecHash": "jcct7VH3LN9ZqlIpYErLNhfJf+DD4pPOS02X8XJIbE5NYiQPpYVrGVRfV50lEMqAMdd+xQjXM08v55fTWuu+5A==",
   "success": true,
-  "projectFilePath": "E:\\CodeBackups\\EternalResolveMod\\EternalResolve.csproj",
+  "projectFilePath": "C:\\Users\\setno\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EternalResolve\\EternalResolve.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\setno\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }

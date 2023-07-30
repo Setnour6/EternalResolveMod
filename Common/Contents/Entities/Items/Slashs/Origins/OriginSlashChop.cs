@@ -31,6 +31,18 @@ namespace EternalResolve.Common.Contents.Entities.Items.Slashs.Origins
             DisplayName.AddTranslation( English , "Slash Chop" );
             Main.projFrames[ Projectile.type ] = 16;
         }
+        public override void SetDefaults( )
+        {
+            ToProjectile( 200 , 200 );
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.penetrate = -1;
+            Projectile.friendly = true;
+            Projectile.tileCollide = false;
+            Projectile.ignoreWater = true;
+            Projectile.ownerHitCheck = true;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 11;
+        }
         public override void OnHitNPC( NPC target , int damage , float knockback , bool crit )
         {
             Projectile.NewProjectile( new ERProjectileSource( ) , target.Center , new Vector2( 0 , 0f ) , ModContent.ProjectileType<Cut_HitEffect>( ) , 0 , 0 , Main.LocalPlayer.whoAmI , Main.rand.NextFloat( ) , 0 );
